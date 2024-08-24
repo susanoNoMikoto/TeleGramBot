@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'ru.susano.no.mikoto.Main'
+group = 'ru.susano.no.mikoto'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jar{
+    manifest {
+        attributes(
+                'Main-Class':'ru.susano.no.mikoto.Main'
+        )
+    }
+}
+
+dependencies {
+    implementation 'org.telegram:telegrambots-longpolling:7.9.0'
+    implementation 'org.telegram:telegrambots-client:7.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
