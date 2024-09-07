@@ -19,7 +19,7 @@ public class MessageSender {
         if (update.hasMessage()) {
             SendMessage message = SendMessage
                     .builder()
-                    .chatId(UserInfo.user_ChatID(update))
+                    .chatId(UserInfo.getUser_ChatID(update))
                     .text(Bot_Answer)
                     .build();
             try{

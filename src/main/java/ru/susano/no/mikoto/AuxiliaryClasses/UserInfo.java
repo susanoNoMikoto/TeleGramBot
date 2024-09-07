@@ -4,13 +4,13 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 public class UserInfo {
 
-    public static String user_TagName(Update update){
+    public static String getUser_TagName(Update update){
         return update.getMessage().getFrom().getUserName();
     };
-    public static String user_ReceivedMessage(Update update){
+    public static String getUser_ReceivedMessage(Update update){
         return update.getMessage().getText();
     }
-    public static long user_ChatID(Update update){
+    public static long getUser_ChatID(Update update){
         return update.getMessage().getChatId();
     }
 

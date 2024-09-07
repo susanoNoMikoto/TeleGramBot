@@ -14,8 +14,8 @@ public class MessagesLogger {
         Path file = Paths.get(System.getenv("MyLogs"));
         try(OutputStream outputStream = new FileOutputStream(file.toFile(),true)){
             outputStream.write((time.getTime().toString()+"\n"
-                                +"Chat : "+UserInfo.user_ChatID(update)+"\n"+
-                                "Message : "+UserInfo.user_ReceivedMessage(update)+" From "+"@"+UserInfo.user_TagName(update)
+                                +"Chat : "+UserInfo.getUser_ChatID(update)+"\n"+
+                                "Message : "+UserInfo.getUser_ReceivedMessage(update)+" From "+"@"+UserInfo.getUser_TagName(update)
                                 +"\n" + System.lineSeparator()).getBytes());
         } catch (IOException e) {
             throw new RuntimeException(e);
